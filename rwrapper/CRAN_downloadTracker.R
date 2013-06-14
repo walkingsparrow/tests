@@ -1,10 +1,12 @@
 ## ======================================================================
 ## Step 1: Download all log files
 ## ======================================================================
- 
+
+root <- "/Users/qianh1/workspace/tests/rwrapper/"
+
 ## Here's an easy way to get all the URLs in R
 start <- as.Date('2013-06-03')
-today <- as.Date('2013-06-13')
+today <- as.Date('2013-06-14')
  
 all_days <- seq(start, today, by = 'day')
  
@@ -12,19 +14,19 @@ year <- as.POSIXlt(all_days)$year + 1900
 urls <- paste0('http://cran-logs.rstudio.com/', year, '/', all_days, '.csv.gz')
  
 ## only download the files you don't have:
-missing_days <- setdiff(as.character(all_days), tools::file_path_sans_ext(dir("CRANlogs"), TRUE))
+missing_days <- setdiff(as.character(all_days), tools::file_path_sans_ext(dir(paste0(root, "CRANlogs")), TRUE))
  
 dir.create("CRANlogs")
 for (i in 1:length(missing_days)) {
   print(paste0(i, "/", length(missing_days)))
-  download.file(urls[i], paste0('CRANlogs/', missing_days[i], '.csv.gz'))
+  download.file(urls[i], paste0(root, 'CRANlogs/', missing_days[i], '.csv.gz'))
 }
 
 ## ======================================================================
 ## Step 2: Load single data files into one big data.table
 ## ======================================================================
  
-file_list <- list.files("CRANlogs", full.names=TRUE)
+file_list <- list.files(paste0(root, "CRANlogs"), full.names=TRUE)
  
 logs <- list()
 for (file in file_list) {
@@ -46,10 +48,10 @@ dat[, week:=strftime(as.POSIXlt(date),format="%Y-%W")]
  
 setkey(dat, package, date, week, country)
  
-save(dat, file="CRANlogs.RData")
+save(dat, file=paste0(root,"CRANlogs.RData"))
  
 ## for later analyses: load the saved data.table
-## load("CRANlogs/CRANlogs.RData")
+## load(paste0(root, "CRANlogs/CRANlogs.RData"))
 
 ## ======================================================================
 ## Step 3: Analyze it!
