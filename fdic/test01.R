@@ -20,8 +20,10 @@ dat <- read.csv("/Users/qianh1/workspace/tests/fdic/pipe_RIS_2004_2011_extract.c
 
 names(dat) <- tolower(names(dat))
 
-delete("fdic")
-x <- as.db.data.frame(dat, "fdic_lower")
+x <- dat[1:10000,]
+
+delete("null_data")
+z <- as.db.data.frame(x, "null_data")
 
 sm <- summary(x)
 
@@ -31,7 +33,7 @@ names(x)
 
 fit <- madlib.lm(sf_mrtg_pct_assets ~ RIS_asset + LNCRCD + LNAUTO + LNCONOTH + LNCONRP + INTMSRFV + LNRENR1A + LNRENR2A + LNRENR3A, data = x)
 
-y <- x[,c("sf_mrtg_pct_assets","RIS_asset", "LNCRCD","LNAUTO","LNCONOTH","LNCONRP","INTMSRFV","LNRENR1A","LNRENR2A","LNRENR3A")]
+y <- dat[,c("sf_mrtg_pct_assets","RIS_asset", "LNCRCD","LNAUTO","LNCONOTH","LNCONRP","INTMSRFV","LNRENR1A","LNRENR2A","LNRENR3A")]
 
 for (i in seq_len(length(names(y)))) y <- y[!is.na(y[i]),]
 
@@ -47,7 +49,19 @@ sm <- summary(y)
 
 z <- as.db.data.frame(y, "fdic_nonull")
 
-y <- x[,c("sf_mrtg_pct_assets","ris_asset", "lncrcd","lnauto","lnconoth","lnconrp","intmsrfv","lnrenr1a","lnrenr2a","lnrenr3a")]
+y <- dat[,c("sf_mrtg_pct_assets","ris_asset", "lncrcd","lnauto","lnconoth","lnconrp","intmsrfv","lnrenr1a","lnrenr2a","lnrenr3a")]
+
+null.data <- y
+
+save(null.data, file = "null.data.RData")
+
+delete("null_data")
+z <- as.db.data.frame(y, "null_data")
+
+y <- z
+
+dim(y)
+
 for (i in seq_len(length(names(y)))) y <- y[!is.na(y[i]),]
 
 dim(y)
