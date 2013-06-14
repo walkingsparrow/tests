@@ -54,6 +54,16 @@ fit1 # view the result
 
 preview(mean((x$rings - predict(fit1, x))^2)) # mean square error
 
+## plot the predicted values v.s. the true values
+ap <- x$rings # true values
+ap$pred <- predict(fit1, x) # add a column which is the predicted values
+
+## If the data set is very big, you do not want to load all the 
+## data points into R and plot. We can just plot a random sample.
+random.sample <- preview(sort(ap, FALSE, "random"), 1000) # sort randomly
+
+plot(random.sample)
+
 ## fit a single model to all data treating sex as a categorial variable
 y <- x # make a copy, y is now a db.data.frame object
 y$sex <- as.factor(y$sex) # y becomes a db.Rquery object now
@@ -117,7 +127,7 @@ preview(y < z, 20)
 ## Deal with NULL values
 
 ## a table that contains NULL values
-x <- db.data.frame("tbl_with_null")
+x <- db.data.frame("fdic_lower")
 
 dim(x)
 
@@ -136,6 +146,8 @@ dim(y)
 ## remove NULL values
 for (i in 1:10) y <- y[!is.na(y[i]),]
 
+content(y)
+
 dim(y)
 
 fit <- madlib.lm(sf_mrtg_pct_assets ~ ., data = y)
@@ -143,6 +155,6 @@ fit <- madlib.lm(sf_mrtg_pct_assets ~ ., data = y)
 fit
 
 ## Or we can replace all NULL values
-x[is.na(x)] <- 45
+x[is.na(x)] <- 0
 
 
