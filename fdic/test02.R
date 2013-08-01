@@ -6,18 +6,28 @@ db.connect(port = 5433)
 
 ## db.list()
 
-## dat <- read.csv("/Users/qianh1/workspace/tests/fdic/pipe_RIS_2004_2011_extract.csv", sep = "|")
+dat <- read.csv("/Users/qianh1/workspace/tests/fdic/fdic.csv", sep = "|")
 
-## names(dat) <- tolower(names(dat))
+names(dat) <- tolower(names(dat))
 
-## delete("fdic_lower")
-## x <- as.db.data.frame(dat, "fdic_lower")
+delete("madlibtestdata.fdic")
+
+x <- as.db.data.frame(dat, "madlibtestdata.fdic")
 
 x <- db.data.frame("fdic_lower")
 
 dim(x)
 
 
+dat <- read.csv("/Users/qianh1/Downloads/credit_nulls.csv", sep = ",")
+
+names(dat) <- tolower(names(dat))
+
+delete("madlibtestdata.fdic_lower")
+
+x <- as.db.data.frame(dat, "madlibtestdata.credit_nulls")
+
+dim(x)
 
 delete("fdic_lower_col")
 

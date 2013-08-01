@@ -28,3 +28,7 @@ clx <- function(fm, dfcw, cluster)
 cf <- clx(r1, 1, dat$sex)$coef
 
 cf
+
+r2 <- glm(rings < 10 ~ length + diameter + height + whole, data = dat, family = binomial)
+
+as.vector(clx(r2, 1, dat$sex)$coef)

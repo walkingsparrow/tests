@@ -6,7 +6,7 @@ root <- "/Users/qianh1/workspace/tests/rwrapper/"
 
 ## Here's an easy way to get all the URLs in R
 start <- as.Date('2013-06-03')
-today <- as.Date('2013-06-14')
+today <- as.Date('2013-07-30')
  
 all_days <- seq(start, today, by = 'day')
  
@@ -30,7 +30,7 @@ file_list <- list.files(paste0(root, "CRANlogs"), full.names=TRUE)
  
 logs <- list()
 for (file in file_list) {
-	print(paste("Reading", file, "..."))
+	cat(paste("Reading", file, "...\n"))
 	logs[[file]] <- read.table(file, header = TRUE, sep = ",", quote = "\"",
          dec = ".", fill = TRUE, comment.char = "", as.is=TRUE)
 }
@@ -71,7 +71,10 @@ d1[package=="psych", ]
 agg1 <- dat[J(c("PivotalR")), length(unique(ip_id)), by=c("week", "package")]
  
 ggplot(agg1, aes(x=week, y=V1, color=package, group=package)) + geom_line() + ylab("Downloads") + theme_bw() + theme(axis.text.x  = element_text(angle=90, size=8, vjust=0.5))
- 
+
+pdf("PivotalR_download.pdf")
+ggplot(agg1, aes(x=week, y=V1, color=package, group=package)) + geom_line() + ylab("Downloads") + theme_bw() + theme(axis.text.x  = element_text(angle=90, size=8, vjust=0.5))
+dev.off()
 
 ## plot 1: Compare downloads of selected packages on a weekly basis
 ## agg1 <- dat[J(c("TripleR", "RSA")), length(unique(ip_id)), by=c("week", "package")]
