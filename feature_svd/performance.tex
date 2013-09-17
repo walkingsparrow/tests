@@ -1,0 +1,78 @@
+% Created 2013-07-29 Mon 10:47
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{performance}
+\author{Qian}
+\date{\today}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.9.3f}}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+
+\section{Dense matrix computation time on DCA}
+\label{sec-1}
+
+
+Compute 10 sigular values and vectors, 50 Lanczos iterations
+
+R: same algorithm using irlba package
+
+MADlib: use svd(\ldots{}) for dense matrix
+
+
+\begin{center}
+\begin{tabular}{lrr}
+ Matrix size   &    R (s)  &  MADlib (s)  \\
+\hline
+ 10000 x 100   &    0.661  &        6.09  \\
+ 10000 x 200   &    0.985  &       6.346  \\
+ 10000 x 400   &      1.6  &       6.545  \\
+ 10000 x 800   &        3  &        7.23  \\
+ 10000 x 1600  &    5.938  &       8.894  \\
+ 10000 x 3200  &   11.362  &      11.174  \\
+ 10000 x 6400  &   26.933  &      15.058  \\
+ 20000 x 6400  &   51.912  &      23.114  \\
+ 40000 x 6400  &  104.435  &      39.054  \\
+ 80000 x 6400  &  167.656  &      76.484  \\
+\hline
+\end{tabular}
+\end{center}
+\section{Sparse matrix computation time on DCA}
+\label{sec-2}
+
+\begin{itemize}
+\item Matrix size: 64067 x 64045
+\item None-zero elements: 94054 (0.00229\%)
+\item Compute first 50 sigular values (90\% of all)
+\item R (irlba): 20.1 s
+\item MADlib: \texttt{svd\_block} \~{} 18 min, \texttt{svd\_sparse\_native} \~{} 445.6 sec
+\item MADlib reconstruction error: 2.15, relative 4.3\%
+\end{itemize}
+\section{In the above tests, R produces the exactly same results as MADlib}
+\label{sec-3}
+
+\end{document}

@@ -6,7 +6,7 @@ root <- "/Users/qianh1/workspace/tests/rwrapper/"
 
 ## Here's an easy way to get all the URLs in R
 start <- as.Date('2013-06-03')
-today <- as.Date('2013-07-30')
+today <- as.Date('2013-09-10')
  
 all_days <- seq(start, today, by = 'day')
  
@@ -51,7 +51,7 @@ setkey(dat, package, date, week, country)
 save(dat, file=paste0(root,"CRANlogs.RData"))
  
 ## for later analyses: load the saved data.table
-## load(paste0(root, "CRANlogs/CRANlogs.RData"))
+load(paste0(root, "CRANlogs.RData"))
 
 ## ======================================================================
 ## Step 3: Analyze it!
@@ -67,13 +67,14 @@ d1 <- dat[, length(week), by=package]
 d1 <- d1[order(V1), ]
 d1[package=="TripleR", ]
 d1[package=="psych", ]
+d1[package=="PivotalR", ]
 
-agg1 <- dat[J(c("PivotalR")), length(unique(ip_id)), by=c("week", "package")]
+agg1 <- dat[J(c("PivotalR")), length(ip_id), by=c("week", "package")]
  
-ggplot(agg1, aes(x=week, y=V1, color=package, group=package)) + geom_line() + ylab("Downloads") + theme_bw() + theme(axis.text.x  = element_text(angle=90, size=8, vjust=0.5))
+ggplot(agg1, aes(x=week, y=V1, color=package, group=package)) + geom_line(size=1.5) + ylab("Downloads") + theme_bw() + theme(axis.text.x  = element_text(angle=90, size=8, vjust=0.5))
 
-pdf("PivotalR_download.pdf")
-ggplot(agg1, aes(x=week, y=V1, color=package, group=package)) + geom_line() + ylab("Downloads") + theme_bw() + theme(axis.text.x  = element_text(angle=90, size=8, vjust=0.5))
+pdf("PivotalR_download.pdf", width=12, height=12)
+ggplot(agg1, aes(x=week, y=V1, color=package, group=package)) + geom_line(size=2) + ylab("Downloads") + theme_bw() + theme(axis.text.x  = element_text(angle=90, size=16, vjust=0.5), axis.title = element_text(size=16))
 dev.off()
 
 ## plot 1: Compare downloads of selected packages on a weekly basis
