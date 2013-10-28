@@ -1,13 +1,14 @@
-
+## ----------------------------------------------------------------------
 ## parse the derivative of any function
+## ----------------------------------------------------------------------
 
-var <- "x"
-x <- deriv(~ log((sin(x)*cos(x))^2 + y), var)
+deriv(~ log((sin(x)*cos(x))^2 + y), var)
 
-x
+## ----------------------------------------------------------------------
 
-parse.deriv <- function (x, var)
+parse.deriv <- function (formula, var)
 {
+    x <- deriv(formula, var)
     lst0 <- deparse(x)
     lst0 <- lst0[2:(length(lst0)-1)]
     lst <- character(0)
@@ -23,17 +24,26 @@ parse.deriv <- function (x, var)
         }
     }
 
-    env <- lapply(lst, function(x) eval(parse(text=paste("quote(", strsplit(x, "\\s*<-\\s*")[[1]][2], ")", sep = ""))))
-    names(env) <- sapply(lst, function(x) gsub("^\\s*", "", strsplit(x, "\\s*<-\\s*")[[1]][1]))
+    env <- lapply(lst, function(x) eval(parse(
+        text = paste("quote(", strsplit(x, "\\s*<-\\s*")[[1]][2],
+        ")", sep = ""))))
+    names(env) <- sapply(lst, function(x)
+                         gsub("^\\s*", "",
+                              strsplit(x, "\\s*<-\\s*")[[1]][1]))
     res <- ""
-    k <- which(names(env) == paste(".grad[, \"", var, "\"]", sep = ""))
+    k <- which(names(env) == paste(".grad[, \"", var, "\"]",
+                    sep = ""))
     
     while (env[[k]] != res) {
         res <- env[[k]]
         for (i in 1:length(env))
-            env[[i]] <- eval(parse(text = paste("substitute(", paste(deparse(env[[i]]), collapse = " "), ", env)", sep = "")))
+            env[[i]] <- eval(parse(text = paste("substitute(",
+                                   paste(deparse(env[[i]]),
+                                         collapse = " "),
+                                   ", env)", sep = "")))
     }
-    paste(deparse(res), collapse = "")
+    gsub("\\s+", " ", paste(deparse(res), collapse = ""))
 }
 
-parse.deriv(x, "x")
+## For example:
+parse.deriv(~ log((sin(x)*cos(x))^2 + y), "x")
