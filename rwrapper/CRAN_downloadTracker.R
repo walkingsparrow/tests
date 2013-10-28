@@ -94,7 +94,7 @@ load(paste0(root, "CRANlogs.RData"))
 require(installr)
  
 # The first two functions might take a good deal of time to run (depending on the date range)
-RStudio_CRAN_data_folder <- download_RStudio_CRAN_data(START = '2013-06-03', END = '2013-10-02')
+RStudio_CRAN_data_folder <- download_RStudio_CRAN_data(START = '2013-06-03', END = '2013-10-09')
 
 my_RStudio_CRAN_data <- read_RStudio_CRAN_data(RStudio_CRAN_data_folder)
  
@@ -114,4 +114,6 @@ agg1 <- ddply(dataset[dataset$"package" %in% c("PivotalR"),], .(time= get("date"
 
 ggplot(agg1, aes(x=time, y=V1, color=package, group=package)) + geom_line() + ylab("Downloads") + theme_bw() + theme(axis.text.x  = element_text(angle=90, size=8, vjust=0.5))
 
-plot(as.Date(agg1$time), agg1$V1, type='l', col='pink', lwd=2)
+pdf("PivotalR_download_count.pdf", width = 400, height = 300)
+plot(as.Date(agg1$time), agg1$V1, type='l', col='pink', lwd=2, xlab = "Day", ylab = "# of IP that downloaded PivotalR")
+dev.off()

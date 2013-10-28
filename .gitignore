@@ -2,3 +2,7 @@
 CRANlogs/
 CRANlogs.RData
 rwrapper/local
+*.gz
+*.txt
+*.csv
+*.dat

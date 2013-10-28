@@ -1,0 +1,12 @@
+Comments on GPDevGuideDraft_11Sept.pdf
+
+• Need Shengwen to put up a guide for installing GPDB + ORCA
+
+• p.57, is the example really using composite types?
+   ◦ seems ok. SQL version of composite type
+
+• Move PivotalR into MADlib chapter
+
+• MADlib’s SVM example is bad, maybe ARIMA or logistic regression
+
+• Maybe improve MADlib chapter name to include “Machine learning” or “analytics” etc

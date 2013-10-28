@@ -1,0 +1,41 @@
+Some suggestions for GPDevGuide from MADlib team
+
+• Move Pivotal R into chapter about MADLib instead of the Appendix
+
+• The example (SVM) for MADlib is bad. It would be better to use
+  ARIMA, logistic regression etc
+
+• What is the difference between the languages of GPDB versions and
+  PG versions?
+   ◦ Some functions exist only in GPDB or PG
+   ◦ Some functions’ functionalities have small difference, e.g. ‘sum’
+   ◦
+
+• SQL
+   ◦ p.58, “In the function, the column names the columns do not need to match.”
+   ◦ p.59, Valuable to mention that anyelement and anyarray should have the same type
+     or provide a link to Postgres doc
+
+• PL/pgSQL
+   ◦ Explanation of “select into”, “execute”, “perform” in plpgsql
+   ◦ “execute using” is not supported by GPDB
+
+• C
+   ◦ p.66, not clear about “When you create user-defined functions, avoid using fatal errors or destructive calls. Greenplum Database may respond to such errors with a sudden shutdown or restart”
+   ◦ p.70, at the beginning, double “these”
+
+• PL/Python
+   ◦ p.93, more explanation on “untrusted”
+
+• MADlib
+   ◦ Need a link to http://madlib.net in the references section too
+   ◦ Should mention something like “machine learning” or “analytics” in the chapter title
+   ◦ Should mention “upgrade”
+   ◦ Command “madpack install-check -p greenplum” should be “madpack -s madlib -p greenplum -c gpadmin@localhost:5432/testdb install-check”
+   ◦ PivotalR needs a link to CRAN (http://cran.r-project.org/web/packages/PivotalR/index.html), GitHub (https://github.com/madlib-internal/PivotalR/). The link to “http://madlib-internal.github.io/PivotalR” should be removed.
+
+• Difference between languages
+
+• How the languages handle different cases
+
+• Clarify the purpose of the doc and the target audience
