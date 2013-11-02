@@ -1,4 +1,10 @@
 
+select madlib.clustered_variance_coxph();
+
+select madlib.clustered_variance_coxph('usage');
+
+----------------------------------------------------------------------
+
 -- CoxPH train
 drop table if exists bladder2_out;
 drop table if exists bladder2_out_summary;

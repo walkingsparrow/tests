@@ -1,0 +1,7 @@
+
+|             | linear | logistic | multi-logit | Cox  |
+|-------------+--------+----------+-------------+------|
+| clustered   | done   | done     | done        | Cox  |
+| Huber-White | todo   | todo     | done        | done |
+| marginal    | NA     | todo     | done        | todo |
+  
