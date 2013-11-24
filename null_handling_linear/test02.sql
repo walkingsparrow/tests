@@ -35,13 +35,36 @@ select * from log_out_summary;
 
 drop table if exists margin_out;
 drop table if exists margin_out_summary;
-select madlib.margins_logregr('madlibtestdata.fdic_part_null_double_wi', 'margin_out', 'z2', 'x');
+select madlib.margins_logregr('madlibtestdata.fdic_part_null_double_wi', 'margin_out', 'z1', 'x');
 
 \x on
 select * from margin_out;
 select * from margin_out_summary;
 \x off
 
+----------------------------------------------------------------------
 
+drop table if exists madlibtestdata.fdic_all_null_grp;
+create table madlibtestdata.fdic_all_null_grp as
+    select
+        z1 as y,
+        case when z2 is False then
+            NULL
+        else
+            x
+        end as x,
+        z2 as grp
+    from madlibtestdata.fdic_part_null_double_wi;
 
+drop table if exists madlibtestdata.fdic_all_null_grp_lin;
+create table madlibtestdata.fdic_all_null_grp_lin as
+    select
+        y as y,
+        case when z2 is False then
+            NULL
+        else
+            x
+        end as x,
+        z2 as grp
+    from madlibtestdata.fdic_part_null_double_wi;
 

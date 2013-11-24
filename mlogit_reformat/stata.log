@@ -1,0 +1,22 @@
+
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   13.1   Copyright 1985-2013 StataCorp LP
+  Statistics/Data Analysis            StataCorp
+                                      4905 Lakeway Drive
+                                      College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+2-user Stata network perpetual license:
+       Serial number:  301306233509
+         Licensed to:  Qian, Hai
+                       Pivotal
+
+Notes:
+      1.  Stata running in batch mode
+
+. doedit robust_mlog.do pokerhand.csv v13 v2 v3 v4 v5 result1.txt 
+invalid 'pokerhand.csv' 
+r(198);

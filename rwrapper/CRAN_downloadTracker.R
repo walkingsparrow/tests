@@ -94,7 +94,7 @@ load(paste0(root, "CRANlogs.RData"))
 require(installr)
  
 # The first two functions might take a good deal of time to run (depending on the date range)
-RStudio_CRAN_data_folder <- download_RStudio_CRAN_data(START = '2013-06-03', END = '2013-10-09')
+RStudio_CRAN_data_folder <- download_RStudio_CRAN_data(START = '2013-06-03', END = '2013-11-19')
 
 my_RStudio_CRAN_data <- read_RStudio_CRAN_data(RStudio_CRAN_data_folder)
  
