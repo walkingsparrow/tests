@@ -1,25 +1,14 @@
 ## test sampling methods
 library(PivotalR)
-db.connect(port = 14526, dbname = "madlib")
+library(glmnet)
+options(digits = 12, width=150)
+db.connect(port = 5433, dbname = "madlib")
 
-x <- db.data.frame("madlibtestdata.dt_abalone")
+dat <- db.data.frame("madlibtestdata.dt_abalone")
 
-y <- as.db.data.frame(x, nrow = 20)
+fit <- madlib.elnet(rings < 10 ~ . - id - sex + weight(as.integer(sex == "M")), data = dat, family = "binomial",
+                    method = "cd", alpha = 1, lambda = 0.05, control = list(tolerance = 1e-6))
 
-lk(y, "all")
+fit
 
-w <- sample(y, size = 10, replace = FALSE)
-
-lk(w, "all")
-
-v <- sample(y, size = 30, replace = TRUE)
-
-u <- lk(v, "all")
-
-table(u$id)
-
-system.time(sample(x, size = 2000, replace = TRUE))
-
-a <- sample(x, size = 20000, replace = TRUE)
-
-dim(a)
+madlib.elnet(rings < 10 ~ . - id - sex, data = dat, family = "binomial", method = "fista", alpha = 1, lambda = 0.05)

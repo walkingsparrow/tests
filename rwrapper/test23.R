@@ -11,7 +11,7 @@ dat <- db.data.frame("madlibtestdata.dt_abalone")
 dat$rings <- scale(dat$rings)
 
 f1 <- madlib.elnet(rings ~ . - id - sex, data = dat, family = "gaussian",
-                   method = "cd", alpha = 0.5, lambda = 0.05, glmnet = F,
+                   method = "fista", alpha = 0.5, lambda = 0.05, glmnet = F,
                    standardize = T, control = list(use.active.set = T))
 
 f1
@@ -93,7 +93,7 @@ dat[,-c(1,2,10)] <- scale(dat[,-c(1,2,10)])
 f1 <- madlib.elnet(rings < 10 ~ . - id - sex, data = dat, family = "binomial",
                    method = "cd", alpha = 0.5, lambda = 0.05, standardize = T,
                    control = list(max.iter = 10000, tolerance = 1e-6,
-                   use.active.set = FALSE, warmup = TRUE))
+                   use.active.set = TRUE))
 
 f1
 

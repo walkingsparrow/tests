@@ -112,8 +112,8 @@ err <- generic.cv(function(data) {
                       madlib.lm(rings ~ . - id - sex, data = data)
                   },
                   predict,
-                  function(predicted, data) {
-                      lookat(mean((data$rings - predicted)^2))
+                  function(predicted, actual) {
+                      lookat(mean((actual$rings - predicted)^2))
                   }, data = y)
 
 err
@@ -138,7 +138,7 @@ lookat(z, 10)
 
 madlib.lm(y ~ x, data = z)
 
-madlib.lm(y ~ x - `x[1]`, data = z) # `x[1]` is a valid R variable name
+madlib.lm(y ~ x - x[1], data = z) # `x[1]` is a valid R variable name
 
 ## ----------------------------------------------------------------------
 ## deal with NULL values in the table
@@ -220,3 +220,5 @@ q <- pca(dat[,-1])
 q$val
 
 q$center
+
+
