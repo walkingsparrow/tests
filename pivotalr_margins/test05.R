@@ -14,7 +14,7 @@ fit <- madlib.glm(rings<10 ~ . - id - sex, data = dat, family = "logistic")
 
 fit
 
-system.time({mar <- margins(fit, ~ . + Vars(1:2), at.mean = FALSE)})
+system.time({mar <- margins(fit, at.mean = FALSE)})
 
 mar
 
@@ -57,3 +57,7 @@ margins(fit, ~ x[2:8], at.mean = TRUE)
 margins(fit, ~ ., at.mean = FALSE)
 
 margins(fit, ~ x, at.mean = FALSE)
+
+deriv(~ `"a"` + b + c + `"a"`*b + b*c + c*`"a"` + `"a"`*b*c, "\"a\"")
+
+PivotalR:::.parse.deriv("`\"a\"` + b + c + `\"a\"`*b + b*c + c*`\"a\"` + `\"a\"`*b*c", "\"a\"")

@@ -41,7 +41,6 @@ cl <- kmeans(dat, 3)
 plot(dat, col = cl$cluster, cex = 0.1)
 points(cl$centers, col = 1:3, pch = 8, cex = 2)
 
-
 ## ----------------------------------------------------------------------
 
 ## compute the simple silhouette
