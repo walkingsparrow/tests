@@ -1,0 +1,500 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- VIM STARTING ---
+000.068  000.064: Allocated generic buffers
+000.311  000.243: locale set
+000.322  000.011: GUI prepared
+000.324  000.002: clipboard setup
+000.331  000.007: window checked
+000.724  000.393: inits 1
+000.829  000.105: parsing arguments
+006.922  006.093: expanding arguments
+009.586  002.664: shell init
+023.511  013.925: Termcap init
+023.573  000.062: inits 2
+026.569  002.996: init highlight
+026.835  000.174  000.174: sourcing $VIM/vimrc
+027.753  000.395  000.395: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+027.934  000.692  000.297: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/synload.vim
+045.547  017.507  017.507: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+045.609  018.525  000.326: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syntax.vim
+045.695  000.013  000.013: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+045.822  000.055  000.055: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+045.915  000.012  000.012: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+046.022  000.043  000.043: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+046.174  000.012  000.012: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+046.242  000.010  000.010: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+046.338  000.011  000.011: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+046.956  000.401  000.401: sourcing /Users/qianh1/.vim/autoload/pathogen.vim
+053.336  001.287  001.287: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftoff.vim
+069.679  000.074  000.074: sourcing /Users/qianh1/.vim/bundle/slimv.vim/ftdetect/clojure.vim
+069.950  000.082  000.082: sourcing /Users/qianh1/.vim/bundle/vim-clojure-static/ftdetect/clojure.vim
+070.373  000.181  000.181: sourcing /Users/qianh1/.vim/bundle/vim-pandoc/ftdetect/pandoc.vim
+070.820  000.365  000.365: sourcing /Users/qianh1/.vim/bundle/Vim-R-plugin/ftdetect/r.vim
+071.035  017.222  016.520: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+072.405  000.280  000.280: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+077.151  000.265  000.265: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+077.847  000.255  000.255: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+078.946  007.544  006.744: sourcing /Users/qianh1/.vim/bundle/colorschemes/colors/zenburn.vim
+079.089  052.164  007.029: sourcing $HOME/.vimrc
+079.100  000.193: sourcing vimrc file(s)
+079.597  000.319  000.319: sourcing /Users/qianh1/.vim/bundle/ack.vim/plugin/ack.vim
+079.798  000.078  000.078: sourcing /Users/qianh1/.vim/bundle/ag.vim/plugin/ag.vim
+080.325  000.411  000.411: sourcing /Users/qianh1/.vim/bundle/atp-vim/plugin/tex_atp.vim
+081.682  001.236  001.236: sourcing /Users/qianh1/.vim/bundle/bufexplorer/plugin/bufexplorer.vim
+082.069  000.251  000.251: sourcing /Users/qianh1/.vim/bundle/closetag/plugin/closetag.vim
+095.548  013.332  013.332: sourcing /Users/qianh1/.vim/bundle/command-t/plugin/command-t.vim
+096.173  000.400  000.400: sourcing /Users/qianh1/.vim/bundle/Conque-Shell/plugin/conque_term.vim
+099.001  002.640  002.640: sourcing /Users/qianh1/.vim/bundle/dbext.vim/plugin/dbext.vim
+100.768  000.848  000.848: sourcing /Users/qianh1/.vim/bundle/delimitMate/autoload/delimitMate.vim
+104.433  005.246  004.398: sourcing /Users/qianh1/.vim/bundle/delimitMate/plugin/delimitMate.vim
+105.010  000.380  000.380: sourcing /Users/qianh1/.vim/bundle/fontsize.vim/plugin/fontsize.vim
+130.187  024.983  024.983: sourcing /Users/qianh1/.vim/bundle/headlights/plugin/headlights.vim
+130.508  000.167  000.167: sourcing /Users/qianh1/.vim/bundle/LargeFile/plugin/LargeFile.vim
+135.800  005.147  005.147: sourcing /Users/qianh1/.vim/bundle/nerdcommenter/plugin/NERD_commenter.vim
+137.567  001.103  001.103: sourcing /Users/qianh1/.vim/bundle/nerdtree/autoload/nerdtree.vim
+138.973  000.527  000.527: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/path.vim
+139.281  000.151  000.151: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim
+139.530  000.102  000.102: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim
+139.792  000.120  000.120: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim
+140.197  000.260  000.260: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim
+140.723  000.374  000.374: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim
+141.319  000.444  000.444: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim
+141.672  000.210  000.210: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/opener.vim
+142.080  000.265  000.265: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/creator.vim
+151.896  000.115  000.115: sourcing /Users/qianh1/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+152.497  000.561  000.561: sourcing /Users/qianh1/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+153.243  017.308  013.076: sourcing /Users/qianh1/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+153.447  000.068  000.068: sourcing /Users/qianh1/.vim/bundle/rainbow_parentheses.vim/plugin/rainbow_parentheses.vim
+153.935  000.016  000.016: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+154.392  000.015  000.015: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+154.732  000.015  000.015: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+155.179  000.014  000.014: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+156.486  002.906  002.846: sourcing /Users/qianh1/.vim/bundle/slimv.vim/plugin/paredit.vim
+157.662  001.053  001.053: sourcing /Users/qianh1/.vim/bundle/supertab/plugin/supertab.vim
+158.280  000.066  000.066: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+158.401  000.084  000.084: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+158.523  000.086  000.086: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+158.697  000.138  000.138: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+158.865  000.132  000.132: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+159.245  000.343  000.343: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+159.476  000.194  000.194: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/makeprg_builder.vim
+159.674  000.161  000.161: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+159.823  000.113  000.113: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+160.257  000.397  000.397: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+160.527  000.232  000.232: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+161.101  000.014  000.014: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+161.143  000.012  000.012: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+161.182  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+161.232  000.012  000.012: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+161.271  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+161.311  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+161.360  000.020  000.020: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/makeprg_builder.vim
+161.398  000.009  000.009: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+161.435  000.008  000.008: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+161.488  000.009  000.009: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+161.525  000.008  000.008: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+162.929  002.364  002.241: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic.vim
+163.454  000.392  000.392: sourcing /Users/qianh1/.vim/bundle/tabular/plugin/Tabular.vim
+164.293  000.719  000.719: sourcing /Users/qianh1/.vim/bundle/tagbar/plugin/tagbar.vim
+164.971  000.556  000.556: sourcing /Users/qianh1/.vim/bundle/taglist/plugin/taglist.vim
+166.653  001.557  001.557: sourcing /Users/qianh1/.vim/bundle/undotree/plugin/undotree.vim
+167.255  000.159  000.159: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline.vim
+167.437  000.659  000.500: sourcing /Users/qianh1/.vim/bundle/vim-airline/plugin/airline.vim
+167.654  000.096  000.096: sourcing /Users/qianh1/.vim/bundle/vim-classpath/plugin/classpath.vim
+168.212  000.028  000.028: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc.vim
+168.316  000.509  000.481: sourcing /Users/qianh1/.vim/bundle/vim-colorscheme-switcher/plugin/colorscheme-switcher.vim
+168.572  000.135  000.135: sourcing /Users/qianh1/.vim/bundle/vim-dict/plugin/dict.vim
+169.477  000.465  000.465: sourcing /Users/qianh1/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
+171.237  002.548  002.083: sourcing /Users/qianh1/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+172.039  000.325  000.325: sourcing /Users/qianh1/.vim/bundle/vim-expand-region/autoload/expand_region.vim
+172.213  000.845  000.520: sourcing /Users/qianh1/.vim/bundle/vim-expand-region/plugin/expand_region.vim
+173.241  000.019  000.019: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/zip.vim
+173.507  000.670  000.651: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/zip.vim
+173.584  001.175  000.505: sourcing /Users/qianh1/.vim/bundle/vim-fireplace/plugin/fireplace/zip.vim
+175.865  002.244  002.244: sourcing /Users/qianh1/.vim/bundle/vim-fireplace/plugin/fireplace.vim
+179.922  003.928  003.928: sourcing /Users/qianh1/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+180.394  000.312  000.312: sourcing /Users/qianh1/.vim/bundle/vim-move/plugin/move.vim
+182.816  000.235  000.235: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc/os.vim
+183.082  000.803  000.568: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc/path.vim
+183.671  002.762  001.959: sourcing /Users/qianh1/.vim/bundle/vim-notes/autoload/xolox/notes.vim
+185.212  004.696  001.934: sourcing /Users/qianh1/.vim/bundle/vim-notes/plugin/notes.vim
+185.517  000.142  000.142: sourcing /Users/qianh1/.vim/bundle/vim-online-thesaurus/plugin/online-thesaurus.vim
+185.963  000.315  000.315: sourcing /Users/qianh1/.vim/bundle/vim-pandoc/plugin/pandoc.vim
+187.237  000.517  000.517: sourcing /Users/qianh1/.vim/bundle/vim-signature/autoload/signature.vim
+187.526  001.414  000.897: sourcing /Users/qianh1/.vim/bundle/vim-signature/plugin/signature.vim
+188.004  000.349  000.349: sourcing /Users/qianh1/.vim/bundle/vimroom/plugin/vimroom.vim
+191.135  001.723  001.723: sourcing /Users/qianh1/.vim/bundle/vimwiki/autoload/vimwiki/base.vim
+191.946  003.816  002.093: sourcing /Users/qianh1/.vim/bundle/vimwiki/plugin/vimwiki.vim
+192.558  000.128  000.128: sourcing /Users/qianh1/.vim/bundle/VOoM/plugin/voom.vim
+193.027  000.083  000.083: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/getscriptPlugin.vim
+193.299  000.236  000.236: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/gzip.vim
+193.551  000.216  000.216: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/matchparen.vim
+194.196  000.608  000.608: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/netrwPlugin.vim
+194.315  000.064  000.064: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/rrhelper.vim
+194.398  000.041  000.041: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/spellfile.vim
+194.640  000.186  000.186: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/tarPlugin.vim
+194.826  000.141  000.141: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/tohtml.vim
+195.049  000.180  000.180: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/vimballPlugin.vim
+195.325  000.220  000.220: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/zipPlugin.vim
+196.210  000.385  000.385: sourcing /Users/qianh1/.vim/bundle/tabular/autoload/tabular.vim
+198.201  002.719  002.334: sourcing /Users/qianh1/.vim/bundle/tabular/after/plugin/TabularMaps.vim
+198.250  007.686: loading plugins
+198.255  000.005: inits 3
+199.975  001.720: reading viminfo
+199.998  000.023: setting raw mode
+200.003  000.005: start termcap
+200.045  000.042: clearing screen
+246.506  001.880  001.880: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/scripts.vim
+266.692  019.743  019.743: sourcing /Users/qianh1/.vim/bundle/dbext.vim/autoload/dbext.vim
+272.481  000.119  000.119: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/init.vim
+273.037  000.122  000.122: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/parts.vim
+273.750  000.278  000.278: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions.vim
+274.166  000.065  000.065: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/commandt.vim
+274.561  000.075  000.075: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/undotree.vim
+275.140  000.088  000.088: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/tagbar.vim
+275.820  000.111  000.111: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/branch.vim
+536.305  230.049: first screen update
+327.221  126.958  126.958: sourcing /Users/qianh1/.vim/bundle/headlights/plugin/headlights.vim
+156.587  101.195  006.259: sourcing $HOME/.vimrc
+292.171  068.031: opening buffers
+077.614  065.653  006.262: sourcing $HOME/.vimrc
+276.301  044.630: GUI delay
+156.380  043.048  041.998: sourcing /Users/qianh1/.vim/bundle/colorschemes/colors/zenburn.vim
+039.226  038.386: expanding arguments
+229.816  034.231: starting GUI
+369.715  033.047: first screen update
+088.482  032.941  000.298: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syntax.vim
+044.372  032.301  000.225: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syntax.vim
+088.425  031.954  017.243: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+044.320  031.583  017.278: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+323.874  026.520: opening buffers
+126.254  026.012  026.012: sourcing /Users/qianh1/.vim/bundle/headlights/plugin/headlights.vim
+297.661  017.730  017.730: sourcing /Users/qianh1/.vim/bundle/dbext.vim/autoload/dbext.vim
+351.660  017.310  013.025: sourcing /Users/qianh1/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+150.761  017.293  012.959: sourcing /Users/qianh1/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+112.982  017.160  016.464: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+069.081  017.158  016.442: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+088.375  014.711  014.657: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/menu.vim
+044.283  014.305  014.246: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/menu.vim
+052.026  012.800: shell init
+092.855  012.321  012.321: sourcing /Users/qianh1/.vim/bundle/command-t/plugin/command-t.vim
+171.086  010.276  010.276: sourcing /Users/qianh1/.vim/bundle/command-t/plugin/command-t.vim
+077.483  008.018  007.190: sourcing /Users/qianh1/.vim/bundle/colorschemes/colors/zenburn.vim
+194.120  007.402: loading plugins
+330.848  006.699: BufEnter autocommands
+133.318  006.420  006.420: sourcing /Users/qianh1/.vim/bundle/nerdcommenter/plugin/NERD_commenter.vim
+298.855  006.400: BufEnter autocommands
+334.197  006.322  006.322: sourcing /Users/qianh1/.vim/bundle/nerdcommenter/plugin/NERD_commenter.vim
+006.349  005.511: expanding arguments
+383.017  004.731  001.860: sourcing /Users/qianh1/.vim/bundle/vim-notes/plugin/notes.vim
+478.490  004.565  004.565: sourcing /Users/qianh1/.vim/bundle/tagbar/autoload/tagbar.vim
+181.641  004.560  001.829: sourcing /Users/qianh1/.vim/bundle/vim-notes/plugin/notes.vim
+419.178  004.494  004.494: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plu
+377.683  004.058  004.058: sourcing /Users/qianh1/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+176.528  003.851  003.851: sourcing /Users/qianh1/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+099.726  003.669  003.089: sourcing /Users/qianh1/.vim/bundle/delimitMate/plugin/delimitMate.vim
+389.370  003.664  001.894: sourcing /Users/qianh1/.vim/bundle/vimwiki/plugin/vimwiki.vim
+178.313  003.611  003.066: sourcing /Users/qianh1/.vim/bundle/delimitMate/plugin/delimitMate.vim
+187.958  003.569  001.921: sourcing /Users/qianh1/.vim/bundle/vimwiki/plugin/vimwiki.vim
+009.515  003.166: shell init
+055.053  002.946: init highlight
+333.761  002.911: VimEnter autocommands
+342.565  002.904  002.904: sourcing /Users/qianh1/.vim/bundle/tagbar/autoload/tagbar.vim
+174.511  002.879  002.879: sourcing /Users/qianh1/.vim/bundle/dbext.vim/plugin/dbext.vim
+381.519  002.871  002.054: sourcing /Users/qianh1/.vim/bundle/vim-notes/autoload/xolox/notes.vim
+301.688  002.830: VimEnter autocommands
+180.150  002.731  001.927: sourcing /Users/qianh1/.vim/bundle/vim-notes/autoload/xolox/notes.vim
+194.074  002.708  002.343: sourcing /Users/qianh1/.vim/bundle/tabular/after/plugin/TabularMaps.vim
+153.747  002.687  002.626: sourcing /Users/qianh1/.vim/bundle/slimv.vim/plugin/paredit.vim
+354.606  002.638  002.577: sourcing /Users/qianh1/.vim/bundle/slimv.vim/plugin/paredit.vim
+369.068  002.450  001.948: sourcing /Users/qianh1/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+168.134  002.405  001.944: sourcing /Users/qianh1/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+095.910  002.335  002.335: sourcing /Users/qianh1/.vim/bundle/dbext.vim/plugin/dbext.vim
+160.478  002.305  002.185: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic.vim
+361.248  002.255  002.128: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic.vim
+172.539  002.162  002.162: sourcing /Users/qianh1/.vim/bundle/vim-fireplace/plugin/fireplace.vim
+011.711  002.137: init highlight
+373.498  002.135  002.135: sourcing /Users/qianh1/.vim/bundle/vim-fireplace/plugin/fireplace.vim
+231.671  001.855: reading viminfo
+388.640  001.770  001.770: sourcing /Users/qianh1/.vim/bundle/vimwiki/autoload/vimwiki/base.vim
+160.073  001.738  001.738: sourcing /Users/qianh1/.vim/bundle/bufexplorer/plugin/bufexplorer.vim
+187.229  001.648  001.648: sourcing /Users/qianh1/.vim/bundle/vimwiki/autoload/vimwiki/base.vim
+051.556  001.417  001.417: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftoff.vim
+183.793  001.284  000.762: sourcing /Users/qianh1/.vim/bundle/vim-signature/plugin/signature.vim
+385.128  001.266  000.753: sourcing /Users/qianh1/.vim/bundle/vim-signature/plugin/signature.vim
+080.031  001.256  001.256: sourcing /Users/qianh1/.vim/bundle/bufexplorer/plugin/bufexplorer.vim
+095.484  001.254  001.254: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftoff.vim
+163.841  001.238  001.238: sourcing /Users/qianh1/.vim/bundle/undotree/plugin/undotree.vim
+364.667  001.231  001.231: sourcing /Users/qianh1/.vim/bundle/undotree/plugin/undotree.vim
+195.409  001.215  001.215: sourcing $VIMRUNTIME/menu.vim
+155.085  001.211  001.211: sourcing /Users/qianh1/.vim/bundle/supertab/plugin/supertab.vim
+135.247  001.208  001.208: sourcing /Users/qianh1/.vim/bundle/nerdtree/autoload/nerdtree.vim
+355.918  001.190  001.190: sourcing /Users/qianh1/.vim/bundle/supertab/plugin/supertab.vim
+371.326  001.155  000.453: sourcing /Users/qianh1/.vim/bundle/vim-fireplace/plugin/fireplace/zip.vim
+336.066  001.140  001.140: sourcing /Users/qianh1/.vim/bundle/nerdtree/autoload/nerdtree.vim
+170.344  001.092  000.413: sourcing /Users/qianh1/.vim/bundle/vim-fireplace/plugin/fireplace/zip.vim
+380.914  000.817  000.584: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc/path.vim
+312.213  000.816  000.702: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/themes/bubblegum.vim
+179.591  000.804  000.570: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc/path.vim
+169.056  000.780  000.450: sourcing /Users/qianh1/.vim/bundle/vim-expand-region/plugin/expand_region.vim
+369.976  000.777  000.450: sourcing /Users/qianh1/.vim/bundle/vim-expand-region/plugin/expand_region.vim
+281.213  000.757  000.647: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/themes/bubblegum.vim
+362.639  000.756  000.756: sourcing /Users/qianh1/.vim/bundle/tagbar/plugin/tagbar.vim
+279.646  000.738  000.738: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/scripts.vim
+161.842  000.718  000.718: sourcing /Users/qianh1/.vim/bundle/tagbar/plugin/tagbar.vim
+371.258  000.702  000.681: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/zip.vim
+056.373  000.689  000.303: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/synload.vim
+170.280  000.679  000.658: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/zip.vim
+158.166  000.630  000.630: sourcing /Users/qianh1/.vim/bundle/atp-vim/plugin/tex_atp.vim
+365.390  000.598  000.438: sourcing /Users/qianh1/.vim/bundle/vim-airline/plugin/airline.vim
+164.582  000.594  000.432: sourcing /Users/qianh1/.vim/bundle/vim-airline/plugin/airline.vim
+097.190  000.580  000.580: sourcing /Users/qianh1/.vim/bundle/delimitMate/autoload/delimitMate.vim
+351.054  000.565  000.565: sourcing /Users/qianh1/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+150.164  000.565  000.565: sourcing /Users/qianh1/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+363.311  000.551  000.551: sourcing /Users/qianh1/.vim/bundle/taglist/plugin/taglist.vim
+337.457  000.545  000.545: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/path.vim
+175.776  000.545  000.545: sourcing /Users/qianh1/.vim/bundle/delimitMate/autoload/delimitMate.vim
+136.686  000.530  000.530: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/path.vim
+162.483  000.524  000.524: sourcing /Users/qianh1/.vim/bundle/taglist/plugin/taglist.vim
+183.564  000.522  000.522: sourcing /Users/qianh1/.vim/bundle/vim-signature/autoload/signature.vim
+384.895  000.513  000.513: sourcing /Users/qianh1/.vim/bundle/vim-signature/autoload/signature.vim
+367.407  000.502  000.502: sourcing /Users/qianh1/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
+012.670  000.493  000.217: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/synload.vim
+190.069  000.489  000.489: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/netrwPlugin.vim
+366.248  000.487  000.457: sourcing /Users/qianh1/.vim/bundle/vim-colorscheme-switcher/plugin/colorscheme-switcher.vim
+166.469  000.461  000.461: sourcing /Users/qianh1/.vim/bundle/vim-easymotion/autoload/EasyMotion.vim
+165.371  000.429  000.400: sourcing /Users/qianh1/.vim/bundle/vim-colorscheme-switcher/plugin/colorscheme-switcher.vim
+339.802  000.419  000.419: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim
+138.985  000.418  000.418: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim
+157.860  000.413  000.413: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+000.723  000.410: inits 1
+161.006  000.402  000.402: sourcing /Users/qianh1/.vim/bundle/tabular/plugin/Tabular.vim
+358.682  000.399  000.399: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+153.843  000.399  000.399: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+361.763  000.387  000.387: sourcing /Users/qianh1/.vim/bundle/tabular/plugin/Tabular.vim
+078.660  000.386  000.386: sourcing /Users/qianh1/.vim/bundle/atp-vim/plugin/tex_atp.vim
+056.190  000.386  000.386: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+000.733  000.386: inits 1
+093.436  000.382  000.382: sourcing /Users/qianh1/.vim/bundle/Conque-Shell/plugin/conque_term.vim
+089.766  000.379  000.379: sourcing /Users/qianh1/.vim/autoload/pathogen.vim
+154.863  000.375  000.375: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+138.420  000.374  000.374: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim
+339.233  000.372  000.372: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim
+068.869  000.372  000.372: sourcing /Users/qianh1/.vim/bundle/Vim-R-plugin/ftdetect/r.vim
+192.048  000.365  000.365: sourcing /Users/qianh1/.vim/bundle/tabular/autoload/tabular.vim
+112.779  000.362  000.362: sourcing /Users/qianh1/.vim/bundle/Vim-R-plugin/ftdetect/r.vim
+160.622  000.360  000.360: sourcing /Users/qianh1/.vim/bundle/closetag/plugin/closetag.vim
+045.626  000.346  000.346: sourcing /Users/qianh1/.vim/autoload/pathogen.vim
+357.655  000.343  000.343: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+184.264  000.341  000.341: sourcing /Users/qianh1/.vim/bundle/vimroom/plugin/vimroom.vim
+156.846  000.340  000.340: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+168.911  000.330  000.330: sourcing /Users/qianh1/.vim/bundle/vim-expand-region/autoload/expand_region.vim
+385.584  000.329  000.329: sourcing /Users/qianh1/.vim/bundle/vimroom/plugin/vimroom.vim
+369.826  000.327  000.327: sourcing /Users/qianh1/.vim/bundle/vim-expand-region/autoload/expand_region.vim
+070.395  000.306  000.306: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+378.157  000.305  000.305: sourcing /Users/qianh1/.vim/bundle/vim-move/plugin/move.vim
+182.365  000.304  000.304: sourcing /Users/qianh1/.vim/bundle/vim-pandoc/plugin/pandoc.vim
+157.124  000.304  000.304: sourcing /Users/qianh1/.vim/bundle/ack.vim/plugin/ack.vim
+383.719  000.298  000.298: sourcing /Users/qianh1/.vim/bundle/vim-pandoc/plugin/pandoc.vim
+176.968  000.288  000.288: sourcing /Users/qianh1/.vim/bundle/vim-move/plugin/move.vim
+293.783  000.284  000.284: sourcing /Users/qianh1/.vim/bundle/syntastic/autoload/syntastic/util.vim
+391.065  000.283  000.283: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/gzip.vim
+305.079  000.276  000.276: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions.vim
+114.209  000.276  000.276: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+012.542  000.276  000.276: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+325.355  000.275  000.275: sourcing /Users/qianh1/.vim/bundle/syntastic/autoload/syntastic/util.vim
+075.809  000.267  000.267: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+000.326  000.264: locale set
+340.567  000.262  000.262: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/creator.vim
+139.743  000.262  000.262: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/creator.vim
+338.708  000.259  000.259: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim
+137.901  000.257  000.257: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim
+171.488  000.255  000.255: sourcing /Users/qianh1/.vim/bundle/Conque-Shell/plugin/conque_term.vim
+076.496  000.255  000.255: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+080.407  000.248  000.248: sourcing /Users/qianh1/.vim/bundle/closetag/plugin/closetag.vim
+158.137  000.242  000.242: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+189.308  000.239  000.239: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/gzip.vim
+178.682  000.238  000.238: sourcing /Users/qianh1/.vim/bundle/fontsize.vim/plugin/fontsize.vim
+126.714  000.238  000.238: sourcing /Users/qianh1/.vim/bundle/LargeFile/plugin/LargeFile.vim
+358.955  000.235  000.235: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+179.322  000.234  000.234: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc/os.vim
+100.087  000.234  000.234: sourcing /Users/qianh1/.vim/bundle/fontsize.vim/plugin/fontsize.vim
+380.636  000.233  000.233: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc/os.vim
+327.681  000.231  000.231: sourcing /Users/qianh1/.vim/bundle/LargeFile/plugin/LargeFile.vim
+000.292  000.227: locale set
+077.988  000.222  000.222: sourcing /Users/qianh1/.vim/bundle/ack.vim/plugin/ack.vim
+191.214  000.221  000.221: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/zipPlugin.vim
+340.162  000.218  000.218: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/opener.vim
+139.343  000.218  000.218: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/opener.vim
+391.507  000.216  000.216: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/matchparen.vim
+190.943  000.214  000.214: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/vimballPlugin.vim
+189.546  000.206  000.206: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/matchparen.vim
+195.661  000.205  000.205: sourcing $VIM/gvimrc
+314.794  000.203  000.203: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/highlighter.vim
+157.071  000.192  000.192: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/makeprg_builder.vim
+283.720  000.190  000.190: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/highlighter.vim
+357.881  000.188  000.188: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/makeprg_builder.vim
+190.510  000.187  000.187: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/tarPlugin.vim
+055.319  000.184  000.184: sourcing $VIM/vimrc
+156.136  000.183  000.183: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+068.421  000.182  000.182: sourcing /Users/qianh1/.vim/bundle/vim-pandoc/ftdetect/pandoc.vim
+358.095  000.178  000.178: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+112.338  000.177  000.177: sourcing /Users/qianh1/.vim/bundle/vim-pandoc/ftdetect/pandoc.vim
+156.602  000.170: sourcing vimrc file(s)
+157.267  000.163  000.163: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+356.942  000.162  000.162: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+164.419  000.162  000.162: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline.vim
+365.224  000.160  000.160: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline.vim
+155.916  000.159  000.159: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+337.781  000.157  000.157: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim
+136.994  000.155  000.155: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim
+181.940  000.140  000.140: sourcing /Users/qianh1/.vim/bundle/vim-online-thesaurus/plugin/online-thesaurus.vim
+356.742  000.139  000.139: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+011.910  000.137  000.137: sourcing $VIM/vimrc
+283.100  000.136  000.136: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/default.vim
+366.500  000.134  000.134: sourcing /Users/qianh1/.vim/bundle/vim-dict/plugin/dict.vim
+276.711  000.134  000.134: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/whitespace.vim
+165.616  000.134  000.134: sourcing /Users/qianh1/.vim/bundle/vim-dict/plugin/dict.vim
+307.548  000.132  000.132: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/whitespace.vim
+357.109  000.130  000.130: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+156.309  000.130  000.130: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+357.275  000.129  000.129: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+383.299  000.128  000.128: sourcing /Users/qianh1/.vim/bundle/vim-online-thesaurus/plugin/online-thesaurus.vim
+314.153  000.128  000.128: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/default.vim
+190.687  000.128  000.128: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/tohtml.vim
+338.304  000.127  000.127: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim
+303.760  000.127  000.127: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/init.vim
+156.471  000.127  000.127: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+137.504  000.127  000.127: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim
+304.345  000.125  000.125: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/parts.vim
+282.511  000.121  000.121: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/util.vim
+313.598  000.120  000.120: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/util.vim
+077.621  000.120: sourcing vimrc file(s)
+350.448  000.116  000.116: sourcing /Users/qianh1/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+157.414  000.115  000.115: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+149.562  000.115  000.115: sourcing /Users/qianh1/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+000.838  000.115: parsing arguments
+358.246  000.114  000.114: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+311.887  000.114  000.114: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/themes.vim
+309.762  000.113  000.113: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/section.vim
+306.655  000.113  000.113: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/branch.vim
+280.888  000.110  000.110: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/themes.vim
+188.534  000.110  000.110: sourcing /Users/qianh1/.vim/bundle/VOoM/plugin/voom.vim
+389.947  000.109  000.109: sourcing /Users/qianh1/.vim/bundle/VOoM/plugin/voom.vim
+278.925  000.109  000.109: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/section.vim
+000.840  000.107: parsing arguments
+338.033  000.105  000.105: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim
+137.241  000.105  000.105: sourcing /Users/qianh1/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim
+365.609  000.099  000.099: sourcing /Users/qianh1/.vim/bundle/vim-classpath/plugin/classpath.vim
+313.207  000.098  000.098: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/builder.vim
+282.120  000.098  000.098: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/builder.vim
+356.562  000.097  000.097: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+164.793  000.097  000.097: sourcing /Users/qianh1/.vim/bundle/vim-classpath/plugin/classpath.vim
+155.722  000.097  000.097: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+306.208  000.091  000.091: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/tagbar.vim
+189.037  000.086  000.086: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/getscriptPlugin.vim
+157.377  000.082  000.082: sourcing /Users/qianh1/.vim/bundle/ag.vim/plugin/ag.vim
+068.032  000.082  000.082: sourcing /Users/qianh1/.vim/bundle/vim-clojure-static/ftdetect/clojure.vim
+052.107  000.081: inits 2
+111.955  000.080  000.080: sourcing /Users/qianh1/.vim/bundle/vim-clojure-static/ftdetect/clojure.vim
+067.786  000.080  000.080: sourcing /Users/qianh1/.vim/bundle/slimv.vim/ftdetect/clojure.vim
+390.523  000.077  000.077: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/getscriptPlugin.vim
+111.709  000.077  000.077: sourcing /Users/qianh1/.vim/bundle/slimv.vim/ftdetect/clojure.vim
+305.816  000.070  000.070: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/undotree.vim
+276.282  000.069  000.069: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/syntastic.vim
+307.119  000.064  000.064: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/syntastic.vim
+305.443  000.063  000.063: sourcing /Users/qianh1/.vim/bundle/vim-airline/autoload/airline/extensions/commandt.vim
+190.204  000.062  000.062: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/rrhelper.vim
+000.065  000.061: Allocated generic buffers
+078.164  000.059  000.059: sourcing /Users/qianh1/.vim/bundle/ag.vim/plugin/ag.vim
+030.589  000.059  000.059: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/paste.vim
+009.574  000.059: inits 2
+000.062  000.059: Allocated generic buffers
+351.839  000.055  000.055: sourcing /Users/qianh1/.vim/bundle/rainbow_parentheses.vim/plugin/rainbow_parentheses.vim
+150.937  000.054  000.054: sourcing /Users/qianh1/.vim/bundle/rainbow_parentheses.vim/plugin/rainbow_parentheses.vim
+074.243  000.054  000.054: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/paste.vim
+088.672  000.050  000.050: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+044.579  000.050  000.050: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+088.854  000.043  000.043: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+044.756  000.043  000.043: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+190.285  000.042  000.042: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/plugin/spellfile.vim
+195.762  000.040  000.040: sourcing $HOME/.gvimrc
+276.347  000.035: clearing screen
+366.153  000.030  000.030: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc.vim
+165.282  000.029  000.029: sourcing /Users/qianh1/.vim/bundle/vim-misc/autoload/xolox/misc.vim
+370.990  000.021  000.021: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/zip.vim
+170.012  000.021  000.021: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/autoload/zip.vim
+359.947  000.018  000.018: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+151.439  000.018  000.018: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+352.321  000.017  000.017: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+352.988  000.015  000.015: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+352.660  000.015  000.015: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+158.688  000.015  000.015: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+152.103  000.015  000.015: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+359.503  000.014  000.014: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+353.317  000.014  000.014: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+152.431  000.014  000.014: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+151.775  000.014  000.014: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+089.174  000.013  000.013: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+089.008  000.013  000.013: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+088.560  000.013  000.013: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+044.456  000.013  000.013: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+000.305  000.013: GUI prepared
+359.546  000.012  000.012: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+158.857  000.012  000.012: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+158.732  000.012  000.012: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+088.752  000.012  000.012: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+045.070  000.012  000.012: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+044.905  000.012  000.012: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+044.654  000.012  000.012: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+000.338  000.012: GUI prepared
+359.746  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/makeprg_builder.vim
+359.667  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+359.627  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+359.587  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+159.002  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+158.816  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+158.774  000.011  000.011: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+359.859  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+359.805  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+359.707  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+159.042  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+158.937  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/makeprg_builder.vim
+158.897  000.010  000.010: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+089.077  000.010  000.010: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+359.899  000.009  000.009: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+159.121  000.009  000.009: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+159.082  000.009  000.009: sourcing /Users/qianh1/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+044.973  000.009  000.009: sourcing /Applications/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+369.722  000.007: --- VIM STARTED ---
+276.312  000.007: start termcap
+000.347  000.006: window checked
+000.313  000.006: window checked
+536.310  000.005: --- VIM STARTED ---
+194.125  000.005: inits 3
+276.305  000.004: setting raw mode
+000.004  000.004: --- VIM STARTING ---
+333.764  000.003: before starting main loop
+301.691  000.003: before starting main loop
+298.858  000.003: editing files in windows
+000.341  000.003: clipboard setup
+000.003  000.003: --- VIM STARTING ---
+330.850  000.002: editing files in windows
+000.307  000.002: clipboard setup
+times in msec
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+ clock   elapsed:              other lines
+
+
+
+
+
+

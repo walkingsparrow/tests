@@ -3,9 +3,53 @@ db.connect(port = 5433, dbname = "madlib")
 
 dat <- db.data.frame("madlibtestdata.dt_abalone")
 
-fit <- madlib.glm(rings < 10 ~ . - id - sex, data = dat, family = "logistic")
+fit <- madlib.glm(rings < 10 ~ length + diameter:shell, data = dat, family = "logistic")
 
-fit <- madlib.glm(rings ~ . - id - sex, data = dat, family = "linear")
+fit
+
+margins(fit, factor.continuous = FALSE)
+
+margins(fit, factor.continuous = TRUE)
+
+fit
+
+margins(fit, factor.continuous = FALSE, at.mean = TRUE)
+
+margins(fit, factor.continuous = TRUE, at.mean = TRUE)
+
+## ----------------------------------------------------------------------
+
+dat <- db.data.frame("madlibtestdata.lin_auto_mpg_wi")
+
+fit <- madlib.lm(y ~ x[2] + x[3]:x[4], data = dat)
+
+fit <- madlib.glm(y < 23 ~ x[2] + x[3]:x[4], data = dat, family = "binomial")
+
+fit
+
+margins(fit, factor.continuous = FALSE, at.mean = F)
+
+
+
+## ----------------------------------------------------------------------
+
+fit <- madlib.glm(rings ~ length + sex, data = dat, family = "linear")
+
+fit
+
+margins(fit, factor.continuous = FALSE)
+
+margins(fit, factor.continuous = TRUE)
+
+fit
+
+margins(fit, factor.continuous = FALSE, at.mean = TRUE)
+
+margins(fit, factor.continuous = TRUE, at.mean = TRUE)
+
+## ----------------------------------------------------------------------
+
+fit <- madlib.glm(rings ~ . - id, data = dat, family = "linear")
 
 fit
 
@@ -89,7 +133,7 @@ test <- function(formula, data)
     colnames(x)
 }
 
-g <- data.frame(a = rep(1, 2), b = c('m', 'f'), e = c(1,1), y = c(1,1))
+g <- data.frame(a = rep(1, 2), b = c('.m', '.f'), e = c(1,1), y = c(1,1))
 
 terms(y ~ e + a + a:b, data = g)
 
