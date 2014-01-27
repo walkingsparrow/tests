@@ -6,8 +6,11 @@ dd <- lk(dat, -1)
 
 hist(dd$rings)
 
-r <- summary(glm(rings ~ length + diameter + shell, data = dd, family = "poisson"))
+f <- glm(rings ~ length + diameter + shell, data = dd, family = "poisson")
 
+r <- summary(f)
+
+## all platforms, trace to display details
 poisson <- function(x, y, init = rep(0, 4)) {
     fn <- function(beta) {
         f <- y*rowSums(beta*x) - exp(rowSums(beta*x))
@@ -27,6 +30,6 @@ g <- poisson(cbind(1, dat[,c("length", "diameter", "shell")]),
 
 g$par
 
-sqrt(diag(solve(-g$hessian)))
+sqrt(diag(solve(-g$hessian)) / nrow(dat))
 
 r
