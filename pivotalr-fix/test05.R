@@ -33,3 +33,8 @@ g$par
 sqrt(diag(solve(-g$hessian)) / nrow(dat))
 
 r
+
+x <- cbind(1, dat[,c("length", "diameter", "shell")])
+h <- lk(crossprod(-x*exp(rowSums(g$par*x)), x))
+
+sqrt(diag(solve(-h)))
