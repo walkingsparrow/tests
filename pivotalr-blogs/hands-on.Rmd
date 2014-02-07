@@ -1,0 +1,143 @@
+A Hands-on Introduction to PivotalR 
+========================================================
+
+This is an introduction about how to use PivotalR. All the examples here can be run by the reader with minor or zero changes.
+
+Why PivotalR?
+--------------------------------
+
+As has been mentioned in the previous blog post about PivotalR, it is a package that enables users of R, the most popular open source statistical programming language and environment to interact with the Pivotal (Greenplum) Database as well as Pivotal HD / HAWQ and the open-source database PostgreSQL for Big Data analytics. It does so by providing an interface to the operations on tables/views in the database. These operations are almost the same as those of data.frame. Minimal amount of data is transfered between R and the database system. Thus the users of R do not need to learn SQL when they operate on the objects in the database. 
+
+PivotalR also lets the user to run the functions of the open-source big-data machine learning package MADlib directly from R.
+
+Getting Started
+--------------------------------
+
+PivotalR is the interface to the database and MADlib. So in order to use it, we need to install a database, MADlib package and then PivotalR. 
+
+### 1. Installing the database
+
+Right now, PivotalR supports the connection to PostgreSQL, Greenplum Database (GPDB) and HAWQ. In the future, we may support more platforms. In the supported platforms, both GPDB and HAWQ are MPP database systems. Although we cannot run parallel computations on PostgreSQL, it is still very useful. Deploying MADlib and PivotalR on PostgreSQL gives the user to big data that cannot be fully loaded into the memory, although it is unlikely to get the same speedup as in GPDB or HAWQ.
+
+### 2. Installing MADlib
+
+One can get the [MADlib](http://madlib.net) installation package and install it on the database.
+
+### 3. Installing PivotalR
+
+One can either install PivotalR from CRAN
+
+```{r install 1, eval=FALSE}
+install.packages("PivotalR")
+```
+
+or install it from GitHub
+
+```{r install 2, eval=FALSE}
+install.packages("devtools")
+devtools::install_github("PivotalR", "gopivotal")
+```
+
+The latest PivotalR on GitHub contains a introduction paper, which has been accepted by [R Journal](http://journal.r-project.org/index.html) and will appear in the next issue. To view this paper, run
+```{r vignette, eval=FALSE}
+vignette("pivotalr")
+```
+
+### 4. Start
+
+```{r setup}
+library(PivotalR)
+db.connect(port = 5433, dbname = "madlib")
+```
+
+I/O - Reading and Writing Data
+---------------------------------
+
+```{r computing}
+delete("abalone")
+dat0 <- as.db.data.frame(abalone, "abalone")
+dat <- db.data.frame("abalone")
+dat.mem <- lk(dat, -1)
+```
+
+Data Manipulations
+------------------------------------
+
+### 1. Subsets
+
+### 2. Joins
+
+### 3. Split-Apply-Combine
+
+```{r by-example}
+# example for by function
+```
+
+### 4. Categorical variables
+
+### 5. Columns that have array values
+  
+### 6. Date and time
+
+### 7. Regular expression
+
+Functions for Machine Learning
+--------------------------------------
+
+### 1. MADlib functions
+
+
+
+```{r step function}
+## example: use step for feature selection
+```
+
+### 2. Other functions
+
+Creating Prototypes for New Algorithms
+----------------------------------------
+
+Linear regression, PCA, logistic regression and Poisson regression examples.
+
+```{r linear regression}
+## example
+```
+
+```{r Poisson regression}
+poisson.regr <- function(x, y) 
+{
+    fn <- function(beta) 
+      lk(mean(y*rowSums(beta*x) - exp(rowSums(beta*x))))
+    
+    gr <- function(beta) lk(mean((y - exp(rowSums(beta*x))) * x))
+    
+    res <- optim(rnorm(length(names(x)), 0, 0.01), fn, gr, method = "L-BFGS-B",
+                 control = list(fnscale = -1, trace = 5), hessian = FALSE)
+    
+    coef <- res$par
+    
+    hessian <- lk(crossprod(-x * exp(rowSums(coef*x)), x))
+    std.err <- sqrt(diag(solve(-hessian)))
+    
+    z <- coef / std.err
+    p <- 2*(1 - pnorm(abs(z)))
+    
+    data.frame(Estimate = coef, `Std. Error` = std.err,
+               `z value` = z, `Pr(>|t|)` = p, check.names = FALSE)
+}
+```
+
+```{r}
+g <- poisson.regr(cbind(1, dat[,c("length", "diameter", "shell")]), dat$rings)
+rownames(g) <- c("(Intercept)", "length", "diameter", "shell")
+printCoefmat(g)
+```
+
+Compare with the R result
+
+```{r}
+summary(glm(rings ~ length + diameter + shell, data = dat.mem, family = poisson))
+```
+
+Future
+---------------------------
