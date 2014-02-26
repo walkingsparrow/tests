@@ -14,6 +14,8 @@ system.time({fit <- madlib.glm(rings < 10 ~ length + diameter + shell, data = da
 
 fit
 
+fit$num_iterations
+
 logit <- function(x, y, init)
 {
     fn <- function(beta) {
@@ -46,32 +48,22 @@ logit1 <- function(x, y, init)
         lk(mean(res))
     }
 
-    updated <- FALSE
     res <- numeric(0)
 
     fn <- function(beta) {
-        if (updated) {
-            updated <<- FALSE
-        } else {
-            res <<- compute(beta)
-            updated <<- TRUE
-        }
+        res <<- compute(beta)
         res[1]
     }
 
-    gr <- function(beta) {
-        if (updated) {
-            updated <<- FALSE
-        } else {
-            res <<- compute(beta)
-            updated <<- TRUE
-        }
-        res[-1]
-    }
+    gr <- function(beta) res[-1]
 
-    optim(init, fn, gr, method = "CG", control = list(fnscale = -1, maxit = 82), hessian = FALSE)
+    optim(init, fn, gr, method = "CG", control = list(fnscale = -1, maxit = 21), hessian = FALSE)
 }
 
 system.time({g1 <- logit1(cbind(1, dat[,c("length", "diameter", "shell")]), dat$rings < 10, init = rep(0, 4))})
 
-g$par
+g1$par
+
+g1$counts
+
+g1$convergence

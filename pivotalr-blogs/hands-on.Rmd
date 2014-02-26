@@ -25,7 +25,7 @@ One can get the [MADlib](http://madlib.net) installation package and install it 
 
 ### 3. Installing PivotalR
 
-One can either install PivotalR from CRAN
+One can either install PivotalR from CRAN. The current version on CRAN is 0.1.11.3.
 
 ```{r install 1, eval=FALSE}
 install.packages("PivotalR")
@@ -42,9 +42,11 @@ The latest PivotalR on GitHub contains a introduction paper, which has been acce
 ```{r vignette, eval=FALSE}
 vignette("pivotalr")
 ```
+or view it on [CRAN](http://cran.r-project.org/web/packages/PivotalR/vignettes/pivotalr.pdf).
 
 ### 4. Start
 
+First, load the library and connect to a database.
 ```{r setup}
 library(PivotalR)
 db.connect(port = 5433, dbname = "madlib")
@@ -53,11 +55,12 @@ db.connect(port = 5433, dbname = "madlib")
 I/O - Reading and Writing Data
 ---------------------------------
 
+Let us use a data set named "abalone", which is included in the package.
 ```{r computing}
-delete("abalone")
-dat0 <- as.db.data.frame(abalone, "abalone")
-dat <- db.data.frame("abalone")
-dat.mem <- lk(dat, -1)
+# delete("abalone")
+# dat0 <- as.db.data.frame(abalone, "abalone") # create a table in database
+dat <- db.data.frame("abalone") # create a wrapper of the data table
+dat.mem <- lk(dat, -1) # load all the data into memory
 ```
 
 Data Manipulations
